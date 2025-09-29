@@ -1,0 +1,16 @@
+@echo off
+echo Starting Bank Application...
+echo.
+echo Starting Bank1 API (Port 7001)...
+start "Bank1 API" cmd /k "cd Bank1 && dotnet run"
+timeout /t 5 /nobreak > nul
+echo.
+echo Starting Client MVC (Port 5000)...
+start "Client MVC" cmd /k "cd Client && dotnet run"
+echo.
+echo Both applications are starting...
+echo Bank1 API: https://localhost:7001
+echo Client MVC: https://localhost:5000
+echo.
+echo Press any key to exit...
+pause > nul
